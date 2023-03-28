@@ -1,0 +1,36 @@
+$padding:8.3%;
+$border-radius:10px;
+
+@import './fonts.scss';
+@import './colors.scss';
+
+// fonts
+// lato
+@import url('https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css');
+
+#app{
+  font-family: 'Lato' !important;
+}
+
+.padding{
+  padding-left:$padding;
+  padding-right:$padding;
+}
+
+.transition{
+  transition: .3s;
+}
+
+.rounded-extra{
+  border-radius: $border-radius;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+input{
+  border:none; 
+}

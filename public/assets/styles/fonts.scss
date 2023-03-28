@@ -1,0 +1,10 @@
+
+@use "sass:math";
+
+$sizes: 9, 10, 12, 14, 16, 18, 24, 32, 42, 48, 64;
+
+@each $size in $sizes {
+  .font-size-#{$size} {
+    font-size: math.div($size, 16) + em;;
+  }
+}
