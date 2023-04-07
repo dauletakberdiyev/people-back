@@ -60,7 +60,7 @@
                             <div class="font-size-64 fw-bold">
                                 215
                             </div>
-                            <div v-html="'home.joblessness.number'" />
+                            <div v-html="$t('home.joblessness.number')" />
                         </div>
                     </div>
                 </div>
@@ -168,17 +168,19 @@
         <!-- end about us -->
         <div class="padding py-5">
             <div class="div-center text-center text-black font-size-32 fw-bold pb-4">{{ $t('home.partners')}}</div>
-            <Slider/>
+            <CarouselPartners/>
         </div>
     </div>
 </template>
 <script>
 import { defineComponent } from "vue";
 import slider from "../components/Slider.vue";
+import carouselPartners from "@/components/CarouselPartners.vue";
 
 export default defineComponent({
     components: {
         Slider: slider,
+        CarouselPartners: carouselPartners
     },
     data () {
         return {
