@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Employer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use PHPUnit\Exception;
 
 class EmployerController extends Controller
 {
@@ -25,8 +27,8 @@ class EmployerController extends Controller
                 'employer.position_desc',
                 'employer.logo'
             )
-            ->orderby('employer.created_at', 'desc')
-            ->get()->toArray();
+            ->orderby('employer.id')
+            ->paginate(10);
 
         return response()->json($companies);
     }
@@ -116,8 +118,19 @@ class EmployerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Employer $employer)
+    public function destroy($id)
     {
-        //
+        try {
+            Employer::where('id', $id)->delete();
+        }
+        catch (Exception $e){
+            return response()->json([
+                'message' => $e->getMessage(),
+            ]);
+        }
+
+        return response()->json([
+            'message' => 'employer deleted successfully',
+        ]);
     }
 }

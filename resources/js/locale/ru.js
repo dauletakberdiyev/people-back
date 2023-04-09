@@ -121,5 +121,20 @@ export default {
   about: {
       title: 'О нас',
       desc: 'Описание'
-  }
+  },
+    admin: {
+        companies: 'Companies',
+        clients: 'Clients',
+        responses: 'Responses',
+        delete: 'Del',
+        name_surname: 'Name Surname',
+        gender: 'Gender',
+        employment: 'Employment Type',
+        experience: 'Experience',
+        position: 'Position',
+        salary: 'Salary',
+        city: 'City',
+        phone: 'Phone',
+        email: 'Email'
+    }
 };

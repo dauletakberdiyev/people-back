@@ -1,13 +1,15 @@
-import {createRouter, createWebHistory} from "vue-router";
+import {createRouter, createWebHashHistory } from "vue-router";
 import Home from "@/views/Home.vue";
 import Vacancies from "@/views/Vacancies.vue";
 import EmployeeForm from "@/views/EmployeeForm.vue";
 import CompanyForm from "@/views/CompanyForm.vue";
 import About from "@/views/About.vue";
 import Success from "@/views/Success.vue";
+import AdminCompany from "@/views/AdminCompany.vue";
+import AdminClient from "@/views/AdminClient.vue";
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
+    history: createWebHashHistory (),
     routes:[
         {
             path: '/',
@@ -38,6 +40,20 @@ const router = createRouter({
             path: '/success',
             name: 'success',
             component: Success
+        },
+        {
+            path: '/admin_page',
+            redirect: '/admin_company'
+        },
+        {
+            path: '/admin_company',
+            name: 'admin_company',
+            component: AdminCompany
+        },
+        {
+            path: '/admin_clients',
+            name: 'admin_clients',
+            component: AdminClient
         }
     ]
 })

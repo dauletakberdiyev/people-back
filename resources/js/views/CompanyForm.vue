@@ -1,4 +1,5 @@
 <template>
+    <navbar-view/>
     <div class="text-start">
         <div class="py-5 bg-grey-light padding text-darkgrey">
             <h1>
@@ -123,11 +124,18 @@
             </form>
         </div>
     </div>
+    <footer-view/>
 </template>
 
 <script>
+import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
 export default {
     name: "indexEmployer",
+    components: {
+        "navbar-view": Navbar,
+        "footer-view": Footer
+    },
     data(){
         return {
             request:{

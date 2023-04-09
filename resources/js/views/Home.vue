@@ -1,4 +1,5 @@
 <template>
+    <navbar-view/>
     <div class="text-start text-black ">
         <!-- naidi rabotu pzh -->
         <div class="d-flex flex-fill me-5 mt-5 align-items-center justify-content-end padding">
@@ -170,17 +171,23 @@
             <div class="div-center text-center text-black font-size-32 fw-bold pb-4">{{ $t('home.partners')}}</div>
             <CarouselPartners/>
         </div>
+        <router-link to="admin_page">admin</router-link>
     </div>
+    <footer-view/>
 </template>
 <script>
 import { defineComponent } from "vue";
 import slider from "../components/Slider.vue";
 import carouselPartners from "@/components/CarouselPartners.vue";
+import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
 
 export default defineComponent({
     components: {
         Slider: slider,
-        CarouselPartners: carouselPartners
+        CarouselPartners: carouselPartners,
+        "navbar-view": Navbar,
+        "footer-view": Footer
     },
     data () {
         return {

@@ -1,4 +1,5 @@
 <template>
+    <navbar-view/>
     <div class="text-start">
         <div class="py-5 bg-grey-light padding text-darkgrey">
             <h1>
@@ -24,12 +25,15 @@
             </div>
         </div>
     </div>
+    <footer-view/>
 </template>
 <script>
 import { defineComponent } from "vue";
 
 import CardVue from "../components/Card.vue";
 import DropdownVue from "../components/Dropdown.vue";
+import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
 
 export default defineComponent({
     data(){
@@ -40,6 +44,8 @@ export default defineComponent({
         }
     },
     components: {
+        "navbar-view": Navbar,
+        "footer-view": Footer,
         CardVue,
         DropdownVue
     },

@@ -36,7 +36,7 @@
                 <span class="text-grey">{{$t('card.month')}}</span>
             </div>
         </div>
-        <div class="d-flex justify-content-center mt-3 position-absolute bottom-5 end-5">
+        <div class="d-flex justify-content-center mt-3 position-absolute bottom-5">
             <button class="btn bg-darkwhite outline-blue border-transparent rounded-extra p-2 px-5 font-size-12">
                 {{ $t('card.view') }}
             </button>

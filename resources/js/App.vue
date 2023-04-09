@@ -1,18 +1,10 @@
 <template>
-    <navbar-view/>
     <router-view/>
-    <footer-view/>
 </template>
 
 <script>
-import Navbar from "@/components/Navbar.vue";
-import Footer from "@/components/Footer.vue";
 export default {
     name: "Welcome",
-    components: {
-        "navbar-view": Navbar,
-        "footer-view": Footer
-    },
     created () {
         this.set_theme();
     },

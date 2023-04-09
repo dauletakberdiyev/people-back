@@ -20,5 +20,10 @@ export default {
   },
   cv: {
     title: "Make a new CV"
+  },
+  admin: {
+      companies: 'Companies',
+      clients: 'Clients',
+      responses: 'Responses'
   }
 };

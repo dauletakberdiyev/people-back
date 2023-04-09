@@ -1,4 +1,5 @@
 <template>
+    <navbar-view/>
     <div class="text-start">
         <div class="py-5 bg-grey-light padding text-darkgrey">
             <h1>
@@ -62,7 +63,18 @@
             </div>
         </div>
     </div>
+    <footer-view/>
 </template>
+<script>
+import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
+export default {
+    components: {
+        "navbar-view": Navbar,
+        "footer-view": Footer
+    }
+}
+</script>
 <style scoped>
 .w-400{
     width:25em;

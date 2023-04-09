@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light padding position-sticky top-0 py-3" style="z-index: 2">
-        <div class="d-flex flex-fill justify-content-between">
+        <div class="d-flex flex-fill justify-content-between center-nav">
             <router-link
                 class="navbar-brand"
                 :to="'/'"
@@ -68,4 +68,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.center-nav{
+    max-width: 1300px;
+    margin: auto;
+}
 </style>

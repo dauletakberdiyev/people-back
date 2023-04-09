@@ -4,27 +4,32 @@ namespace App\Http\Controllers;
 
 use App\Models\Employee;
 use Illuminate\Http\Request;
+use PHPUnit\Exception;
 
 class EmployeeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $employee = Employee::select(
-            'first_name',
-            'second_name',
-            'gender',
-            'experience',
-            'position',
-            'salary',
-            'city',
-            'phone',
-            'email',
-            'cv'
-        )
-            ->get()->toArray();
+        $employee = Employee::join('city', 'city.id', '=', 'employees.city')
+            ->join('gender', 'gender.id', '=', 'employees.gender')
+            ->select(
+                'employees.id',
+                'employees.first_name',
+                'employees.second_name',
+                'gender.title_'.$request->input('lang').' as gender',
+                'employees.experience',
+                'employees.position',
+                'employees.salary',
+                'city.title_'.$request->input('lang').' as city',
+                'employees.phone',
+                'employees.email',
+                'employees.cv'
+            )
+            ->orderby('employees.id')
+            ->paginate(10);
 
         return response()->json($employee);
     }
@@ -97,8 +102,19 @@ class EmployeeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Employee $employee)
+    public function destroy($id)
     {
-        //
+        try {
+            Employee::where('id', $id)->delete();
+        }
+        catch (Exception $e){
+            return response()->json([
+                'message' => $e->getMessage(),
+            ]);
+        }
+
+        return response()->json([
+            'message' => 'employee deleted successfully',
+        ]);
     }
 }
