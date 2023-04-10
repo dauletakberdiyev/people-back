@@ -7,7 +7,7 @@
         <!-- title -->
         <div class="d-flex">
             <div class="icon me-3">
-                <img class="icon-img" :src="company.logo.substring(39)" alt="mc">
+                <img class="icon-img" :src="company.logo.substring(42)" alt="mc">
             </div>
             <div>
                 <div class="font-size-14">
