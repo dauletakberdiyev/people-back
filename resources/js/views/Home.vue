@@ -2,16 +2,16 @@
     <navbar-view/>
     <div class="text-start text-black ">
         <!-- naidi rabotu pzh -->
-        <div class="d-flex flex-fill me-5 mt-5 align-items-center justify-content-end padding">
-            <div class="mb-5 ms-auto text-start pb-5 w-500">
+        <div class="top-banner d-flex flex-fill me-5 mt-5 align-items-center justify-content-end padding">
+            <div class="top-banner-div mb-5 ms-auto text-start pb-5 w-500">
                 <div
-                    class="font-size-64 fw-bold"
+                    class="top-banner-title font-size-64 fw-bold"
                     v-html="$t('home.find_dream_job')"
                 />
-                <div class="font-size-24">
+                <div class="top-banner-desc font-size-24">
                     {{ $t('home.find_dream_job_desc') }}
                 </div>
-                <div class="d-flex mt-4">
+                <div class="top-banner-btn d-flex mt-4">
                     <div class="btn_work">
                         <img src="assets/images/icon-1@2x.png" alt="icon" class="icon">
                         <router-link class="btn bg-grey-light text-primary btn-pd me-5" :to="'/new_cv'">
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <img
-                class="ms-auto"
+                class="top-banner-img ms-auto"
                 src="assets/images/Chelik.png"
                 alt="Chelik s flagom"
             >
@@ -36,46 +36,46 @@
 
         <!-- statistica -->
 
-        <div class="d-flex flex-column bg-blue pt-5 text-white align-items-end">
+        <div class="statistics d-flex flex-column bg-blue pt-5 text-white align-items-end">
             <div class="d-flex flex-column">
-                <div class="d-flex my-5 pe-5 me-4">
-                    <div class="me-5 w-500">
-                        <div class="font-size-14">
+                <div class="statistics-main d-flex my-5 pe-5 me-4">
+                    <div class="statistics-top me-5 w-500">
+                        <div class="statistics-main-title font-size-14">
                             {{ $t("home.joblessness.stats") }}
                         </div>
-                        <div class="font-size-42">
+                        <div class="statistics-title font-size-42">
                             {{ $t('home.joblessness.title') }}
                         </div>
-                        <div class="font-size-18">
+                        <div class="statistics-desc font-size-18">
                             {{ $t('home.joblessness.desc') }}
                         </div>
                     </div>
-                    <div class="d-flex ms-5">
-                        <div class="me-5">
-                            <div class="font-size-64 fw-bold">
+                    <div class="statistics-mid d-flex ms-5">
+                        <div class="statistics-mid-card me-5">
+                            <div class="statistics-number font-size-64 fw-bold">
                                 4.9%
                             </div>
-                            <div v-html="$t('home.joblessness.level')" />
+                            <div class="statistics-number-desc" v-html="$t('home.joblessness.level')" />
                         </div>
-                        <div class="me-5">
-                            <div class="font-size-64 fw-bold">
+                        <div class="statistics-mid-card me-5">
+                            <div class="statistics-number font-size-64 fw-bold">
                                 215
                             </div>
-                            <div v-html="$t('home.joblessness.number')" />
+                            <div class="statistics-number-desc" v-html="$t('home.joblessness.number')" />
                         </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-end mt-5">
-                    <div class="bg-darkblue p-5 w-350">
+                <div class="statistics-bottom d-flex justify-content-end mt-5">
+                    <div class="statistics-bottom-card bg-darkblue p-5 w-350">
                         <div
                             class="fw-bold"
                             v-html="$t('home.joblessness.markets[0].title')"
                         />
-                        <div class="mt-3">
+                        <div class="statistics-bottom-card-decs mt-3">
                             {{ $t('home.joblessness.markets[0].desc') }}
                         </div>
                     </div>
-                    <div class="grey-bg p-5 text-black w-350">
+                    <div class="statistics-bottom-card grey-bg p-5 text-black w-350">
                         <div
                             class="fw-bold"
                             v-html="$t('home.joblessness.markets[1].title')"
@@ -84,7 +84,7 @@
                             {{ $t('home.joblessness.markets[1].desc') }}
                         </div>
                     </div>
-                    <div class="bg-lightgrey p-5 text-black w-500">
+                    <div class="statistics-bottom-card bg-lightgrey p-5 text-black w-500">
                         <div
                             class="fw-bold"
                             v-html="$t('home.joblessness.markets[2].title')"
