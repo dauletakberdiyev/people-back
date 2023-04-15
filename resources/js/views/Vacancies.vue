@@ -1,16 +1,16 @@
 <template>
     <navbar-view/>
     <div class="text-start">
-        <div class="py-5 bg-grey-light padding text-darkgrey">
+        <div class="vacancies-title py-5 bg-grey-light padding text-darkgrey">
             <h1>
                 {{ $t('vacancies.title') }}
             </h1>
         </div>
-        <div class="padding pt-5">
-            <div class="text-blue mt-5">
+        <div class="vacancies-list padding pt-5">
+            <div class="vacancies-dropdown text-blue mt-5">
                 <dropdown-vue :title="$t('vacancies.dropdown')" />
             </div>
-            <div class="grid mt-4 px-4 ">
+            <div class="vacancies-cards grid mt-4 px-4 ">
                 <card-vue
                     v-for="company in values.companies"
                     :key="company.id"

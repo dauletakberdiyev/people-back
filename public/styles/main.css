@@ -163,4 +163,26 @@
     .header-btn{
         margin-left: 0 !important;
     }
+
+    /* vacancies */
+    .vacancies-title{
+        padding: 30px !important;
+    }
+    .vacancies-title h1{
+        font-size: 30px;
+    }
+    .vacancies-list{
+        padding-top: 30px !important;
+        display: flex;
+        flex-direction: column;
+    }
+    .vacancies-dropdown{
+        margin-top: 0 !important;
+        display: none;
+    }
+    .vacancies-cards{
+        display: flex !important;
+        flex-direction: column !important;
+        margin: 0 auto !important;
+    }
 }
