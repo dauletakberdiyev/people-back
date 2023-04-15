@@ -193,4 +193,34 @@
     .about-title h1{
         font-size: 30px;
     }
+
+    /* employee */
+    .employee-title{
+        padding: 30px !important;
+    }
+    .employee-title h1{
+        font-size: 30px;
+    }
+    .employee-desc{
+        width: 100% !important;
+        padding-top: 30px !important;
+    }
+    .employee-inputs{
+        display: flex !important;
+        flex-direction: column;
+    }
+    .employee-input-box{
+        margin-bottom: 0 !important;
+    }
+    .employee-input{
+        width: 100% !important;
+        margin-bottom: 30px !important;
+    }
+    .employee-cv-title{
+        font-size: 13px;
+    }
+    .employee-cv-btn{
+        font-size: 13px;
+        padding: 8px 40px !important;
+    }
 }

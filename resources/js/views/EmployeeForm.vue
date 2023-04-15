@@ -1,62 +1,62 @@
 <template>
     <navbar-view/>
     <div class="text-start">
-        <div class="py-5 bg-grey-light padding text-darkgrey">
+        <div class="employee-title py-5 bg-grey-light padding text-darkgrey">
             <h1>
                 {{ $t('cv.title') }}
             </h1>
         </div>
         <div class="d-flex flex-column">
-            <div class="padding pt-5 w-600 fw-bold ls-0 font-size-14 lh-normal">
+            <div class="employee-desc padding pt-5 w-600 fw-bold ls-0 font-size-14 lh-normal">
                 {{ $t('cv.desc') }}
             </div>
             <form @submit.prevent="storeEmployee">
                 <div class="mt-5">
-                    <div action="" class="grid mw-780 padding">
-                        <div class="d-flex flex-column mb-3">
+                    <div action="" class="employee-inputs grid mw-780 padding">
+                        <div class="employee-input-box d-flex flex-column mb-3">
                             <div class="text-start font-size-14">
                                 {{ $t('cv.name') }}
                             </div>
-                            <input type="text" class="in-text w-240 p-2 font-size-14" id="firstName" v-model="request.first_name" required>
+                            <input :placeholder="$t('cv.name')" type="text" class="employee-input in-text w-240 p-2 font-size-14" id="firstName" v-model="request.first_name" required>
                         </div>
                         <div class="d-flex flex-column">
                             <div class="text-start font-size-14">
                                 {{ $t('cv.surname') }}
                             </div>
-                            <input type="text" class="in-text w-240 p-2 font-size-14" id="secondName" v-model="request.second_name" required>
+                            <input :placeholder="$t('cv.surname')" type="text" class="employee-input in-text w-240 p-2 font-size-14" id="secondName" v-model="request.second_name" required>
                         </div>
                         <div class="d-flex flex-column">
                             <div class="text-start font-size-14">
                                 {{ $t('cv.gender') }}
                             </div>
-                            <select class="in-text w-240 p-2 font-size-14 bg-white" v-model="request.gender" required>
+                            <select class="employee-input in-text w-240 p-2 font-size-14 bg-white" v-model="request.gender" required>
                                 <option value="1">{{$t('vacancies.man')}}</option>
                                 <option value="2">{{$t('vacancies.woman')}}</option>
                             </select>
                         </div>
-                        <div class="d-flex flex-column mb-3">
+                        <div class="employee-input-box d-flex flex-column mb-3">
                             <div class="text-start font-size-14">
                                 {{ $t('cv.experience') }}
                             </div>
-                            <input type="number" class="in-text w-240 p-2 font-size-14" min="0" max="30" id="experience" v-model="request.experience" required>
+                            <input :placeholder="$t('cv.number')" type="number" class="employee-input in-text w-240 p-2 font-size-14" min="0" max="30" id="experience" v-model="request.experience" required>
                         </div>
                         <div class="d-flex flex-column">
                             <div class="text-start font-size-14">
                                 {{ $t('cv.position') }}
                             </div>
-                            <input type="text" class="in-text w-240 p-2 font-size-14" id="experience" v-model="request.position" required>
+                            <input :placeholder="$t('cv.position_plc')" type="text" class="employee-input in-text w-240 p-2 font-size-14" id="experience" v-model="request.position" required>
                         </div>
                         <div class="d-flex flex-column">
                             <div class="text-start font-size-14">
                                 {{ $t('cv.salary') }}
                             </div>
-                            <input type="text" class="in-text w-240 p-2 font-size-14" id="salary" v-model="request.salary" required>
+                            <input :placeholder="$t('cv.salary_plc')" type="text" class="employee-input in-text w-240 p-2 font-size-14" id="salary" v-model="request.salary" required>
                         </div>
-                        <div class="d-flex flex-column mb-3">
+                        <div class="employee-input-box d-flex flex-column mb-3">
                             <div class="text-start font-size-14">
                                 {{ $t('cv.city') }}
                             </div>
-                            <select class="in-text w-240 p-2 font-size-14 bg-white" v-model="request.city" required>
+                            <select class="employee-input in-text w-240 p-2 font-size-14 bg-white" v-model="request.city" required>
                                 <option v-for="city in values.cities" :value="city.id">
                                     {{ city.title }}
                                 </option>
@@ -66,13 +66,13 @@
                             <div class="text-start font-size-14">
                                 {{ $t('cv.phone') }}
                             </div>
-                            <input type="text" class="in-text w-240 p-2 font-size-14" id="phone" v-model="request.phone" required>
+                            <input :placeholder="$t('cv.phone_plc')" type="text" class="employee-input in-text w-240 p-2 font-size-14" id="phone" v-model="request.phone" required>
                         </div>
                         <div class="d-flex flex-column">
                             <div class="text-start font-size-14">
                                 {{ $t('cv.email') }}
                             </div>
-                            <input type="text" class="in-text w-240 p-2 font-size-14" id="email" v-model="request.email" required>
+                            <input :placeholder="$t('cv.email_plc')" type="text" class="employee-input in-text w-240 p-2 font-size-14" id="email" v-model="request.email" required>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                 <div class="mt-5 mb-5 padding d-flex">
                     <div class="d-flex me-5">
                         <label
-                            class="d-flex align-items-center text-blue"
+                            class="employee-cv-title d-flex align-items-center text-blue"
                             for="upload"
                         >
                             <svg
@@ -110,7 +110,7 @@
                             >
                         </label>
                     </div>
-                    <button class="btn btn-primary  rounded-extra px-5 py-2 font-size-13">{{ $t('cv.send') }}</button>
+                    <button class="employee-cv-btn btn btn-primary  rounded-extra px-5 py-2 font-size-13">{{ $t('cv.send') }}</button>
                 </div>
             </form>
         </div>

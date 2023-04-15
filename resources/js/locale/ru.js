@@ -91,7 +91,13 @@ export default {
     attach: "Прикрепить файл",
     send: "Отправить",
     attach_cv: "Прикрепить Резюме*",
-    attach_logo: "Прикрепить Логотип Компании*"
+    attach_logo: "Прикрепить Логотип Компании*",
+    data: "Введите данные",
+    number: "4",
+    position_plc: "Директор",
+    salary_plc: "300000",
+    phone_plc: "87007007070",
+    email_plc: "someperson@gmail.com"
   },
   employer: {
     title: "Создании объявлении о вакансии",
