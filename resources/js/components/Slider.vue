@@ -37,7 +37,7 @@ export default {
         Card
     },
     mounted() {
-        this.getCompanies(),
+        this.getCompanies(), 
         this.changeCarouselShow(),
         this.nextTrick()
     },
@@ -46,9 +46,9 @@ export default {
     },
     methods:{
         getCompanies(){
-            this.$http.get('api/employer?lang=' + this.$i18n.locale)
+            this.$http.get('api/employer/latestCompanies?lang=' + this.$i18n.locale)
                 .then(response => {
-                    this.values.companies = response.data.data;
+                    this.values.companies = response.data;
                 })
         },
         nextTrick(){

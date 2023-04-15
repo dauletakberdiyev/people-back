@@ -54,9 +54,9 @@ export default defineComponent({
     },
     methods:{
         getCompanies(){
-            this.$http.get('api/employer?lang=' + this.$i18n.locale)
+            this.$http.get('api/employer/allCompanies?lang=' + this.$i18n.locale)
                 .then(response => {
-                    this.values.companies = response.data.data;
+                    this.values.companies = response.data;
                 })
         }
     }

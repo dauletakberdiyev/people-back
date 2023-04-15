@@ -22,7 +22,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/employer/latestCompanies', [EmployerController::class, 'showLatestEmployers']);
+Route::get('/employer/allCompanies', [EmployerController::class, 'showAllEmployers']);
 Route::resource('employee', EmployeeController::class);
 Route::resource('employer', EmployerController::class);
 Route::resource('employment', EmploymentController::class);
 Route::resource('city', CityController::class);
+

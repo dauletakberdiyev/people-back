@@ -133,4 +133,42 @@ class EmployerController extends Controller
             'message' => 'employer deleted successfully',
         ]);
     }
+
+    public function showLatestEmployers(Request $request){
+        $companies = Employer::join('employment', 'employment.id', '=', 'employer.employment')
+            ->join('city', 'city.id', '=', 'employer.city')
+            ->select(
+                'employer.id',
+                'employer.name',
+                'employer.position',
+                'employment.title_'.$request->input('lang').' as employment',
+                'city.title_'.$request->input('lang').' as city',
+                'employer.salary',
+                'employer.position_desc',
+                'employer.logo'
+            )
+            ->orderby('employer.id', 'desc')
+            ->take(10)->get()->toArray();
+
+        return response()->json($companies);
+    }
+    
+    public function showAllEmployers(Request $request){
+        $companies = Employer::join('employment', 'employment.id', '=', 'employer.employment')
+            ->join('city', 'city.id', '=', 'employer.city')
+            ->select(
+                'employer.id',
+                'employer.name',
+                'employer.position',
+                'employment.title_'.$request->input('lang').' as employment',
+                'city.title_'.$request->input('lang').' as city',
+                'employer.salary',
+                'employer.position_desc',
+                'employer.logo'
+            )
+            ->orderby('employer.id', 'desc')
+            ->get()->toArray();
+
+        return response()->json($companies);
+    }
 }
