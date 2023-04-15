@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light padding position-sticky top-0 py-3" style="z-index: 2">
-        <div class="d-flex flex-fill justify-content-between center-nav">
+        <div class="d-flex flex-fill justify-content-between center-nav container-fluid">
             <router-link
                 class="navbar-brand"
                 :to="'/'"
@@ -28,13 +28,13 @@
                 <router-link
                     v-for="(link,index) in links"
                     :key="index"
-                    class="fw-normal text-decoration-none me-4"
+                    class="fw-normal text-decoration-none me-4 nav-link header-link"
                     :to="link.link"
                 >
                     {{ $t(link.name) }}
                 </router-link>
-                <div class="ms-4">
-                    <router-link class="btn btn-primary  rounded-extra px-5 py-2" :to="'/new_cv'">
+                <div class="ms-4 nav-item header-btn">
+                    <router-link class="nav-link btn btn-primary  rounded-extra px-5 py-2" :to="'/new_cv'">
                         {{ $t('main_view.apply') }}
                     </router-link>
                 </div>

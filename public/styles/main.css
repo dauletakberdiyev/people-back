@@ -71,4 +71,96 @@
     .statistics-bottom-card-decs{
         font-size: 14px;
     }
+
+    /* Vacncy */
+    .vacancy{
+        padding-top: 30px !important;
+    }
+    .vacancy-title{
+        width: 100% !important;
+        font-size: 24px;
+    }
+    .card{
+        margin-right: 0 !important;
+    }
+
+    /* about-us */
+    .about-us{
+        padding-top: 50px !important;
+    }
+    .about-us-inner{
+        padding: 0 !important;
+    }
+    .about-us-cards{
+        flex-direction: column;
+    }
+    .about-us-card{
+        width: 100% !important;
+        margin-bottom: 50px !important;
+    }
+    .about-us-card-number{
+        font-size: 36px !important;
+    }
+    .about-us-card-desc{
+        font-size: 12px;
+    }
+    
+    /* partners */
+    .partners-title{
+        width: 100% !important;
+        font-size: 24px !important;
+    }
+
+    /* footer */
+    .footer{
+        padding-top: 40px;
+    }
+    .footer-top{
+        flex-direction: column;
+        align-items: flex-start !important;
+        padding-bottom: 20px;
+    }
+    .footer-logo{
+        width: 100px;
+    }
+    .footer-logo img{
+        width: 100%;
+    }
+    .footer-form{
+        width: 100%;
+    }
+    .footer-input{
+        width: 100% !important;
+    }
+    .footer-input-title{
+        align-self: flex-start !important;
+    }
+    .footer-bottom{
+        justify-content: space-between;
+    }
+    .footer-links{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 !important;
+    }
+    .footer-link{
+        margin-right: 0 !important;
+        margin-bottom: 30px;
+    }
+    .footer-rights-icons{
+        
+    }
+    .footer-rights{
+        font-size: 12px;
+        text-align: left;
+    }
+
+    /* header */
+    .header-link{
+        margin-right: 0 !important;
+    }
+    .header-btn{
+        margin-left: 0 !important;
+    }
 }

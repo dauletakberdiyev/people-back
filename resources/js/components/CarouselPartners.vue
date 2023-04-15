@@ -1,12 +1,12 @@
 <template>
-    <carousel :items-to-show="4"
+    <carousel :items-to-show="this.itemsToShow"
               :wrapAround="true"
     >
         <slide v-for="partner in partners" :key="partners">
             <img :src="partner" alt="partner" class="partner-img">
         </slide>
 
-        <template #addons>
+        <template #addons> 
             <navigation />
             <pagination />
         </template>
@@ -27,7 +27,9 @@ export default {
                 'assets/images/baytakdala@2x.png',
                 'assets/images/happy-cake@2x.png',
                 'assets/images/lg-hausys@2x.png'
-            ]
+            ],
+            windowWidth: 0,
+            itemsToShow: 4
         }
     },
     components: {
@@ -36,6 +38,26 @@ export default {
         Pagination,
         Navigation
     },
+    mounted() {
+        this.changeCarouselShow(),
+        this.nextTrick()
+    },
+    beforeDestroy() { 
+        window.removeEventListener('resize', this.changeCarouselShow); 
+    },
+    methods:{
+        nextTrick(){
+            this.$nextTick(() => {
+                window.addEventListener('resize', this.changeCarouselShow);
+            })
+        },
+        changeCarouselShow(){
+            this.windowWidth = window.innerWidth;
+            if(this.windowWidth < 600){
+                this.itemsToShow = 1;
+            }
+        }
+    }
 }
 </script>
 

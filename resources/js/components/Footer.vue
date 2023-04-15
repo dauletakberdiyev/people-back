@@ -1,23 +1,22 @@
 <template>
     <!-- Footer -->
-    <footer class="bg-darkblack text-center text-white">
-        <div class="d-flex align-items-center justify-content-between top-container-height padding border-bottom border-dark">
+    <footer class="footer bg-darkblack text-center text-white">
+        <div class="footer-top d-flex align-items-center justify-content-between top-container-height padding border-bottom border-dark">
             <router-link
-                class="navbar-brand"
+                class="footer-logo navbar-brand"
                 :to="'/'"
             >
                 <img
                     src="assets/images/logo_dark.png"
                 >
             </router-link>
-            <form class="d-flex flex-column">
-                <a
-                    href="#"
-                    class="align-self-end text-decoration-none link-light"
+            <form class="footer-form d-flex flex-column">
+                <span
+                    class="footer-input-title align-self-end text-decoration-none link-light"
                 >
                     {{ $t('main_view.apply_text') }}
-                </a>
-                <div class="form_input mt-3">
+                </span>
+                <div class="footer-input form_input mt-3">
                     <input
                         class="rounded-extra px-3 small w-100 h-100"
                         type="text"
@@ -30,17 +29,17 @@
             </form>
         </div>
         <div class="center-container-height padding">
-            <div class="d-flex mt-5">
-                <div>
+            <div class="footer-bottom d-flex mt-5">
+                <div class="footer-btn">
                     <router-link class="btn btn-primary" :to="'/new_cv'">
                         {{ $t('main_view.apply') }}
                     </router-link>
                 </div>
-                <div class="m-auto">
+                <div class="footer-links m-auto">
                     <router-link
                         v-for="(link,index) in links"
                         :key="index"
-                        class="fw-normal text-decoration-none link-light me-5"
+                        class="footer-link fw-normal text-decoration-none link-light me-5"
                         :to="link.link"
                     >
                         {{ $t(link.name) }}
@@ -49,9 +48,9 @@
             </div>
         </div>
         <div
-            class="text-center padding bg-black bottom-container-height d-flex align-items-center justify-content-between"
+            class="footer-rights-icons text-center padding bg-black bottom-container-height d-flex align-items-center justify-content-between"
         >
-            <div>
+            <div class="footer-rights">
                 {{ $t('main_view.rights') }}
             </div>
             <div class="d-flex">
@@ -108,10 +107,6 @@ const icons = [
     {
         link: "",
         src: "assets/images/instagram.png"
-    },
-    {
-        link: "",
-        src: "assets/images/twitter.png"
     }
 ];
 export default defineComponent({

@@ -1,5 +1,5 @@
 <template>
-    <carousel :items-to-show="3"
+    <carousel :items-to-show="this.itemsToShow"
               :wrapAround="true"
     >
         <slide v-for="company in values.companies" :key="company.id">
@@ -24,7 +24,9 @@ export default {
         return{
             values:{
                 companies:[]
-            }
+            },
+            windowWidth: 0,
+            itemsToShow: 3
         }
     },
     components: {
@@ -35,7 +37,12 @@ export default {
         Card
     },
     mounted() {
-        this.getCompanies()
+        this.getCompanies(),
+        this.changeCarouselShow(),
+        this.nextTrick()
+    },
+    beforeDestroy() { 
+        window.removeEventListener('resize', this.changeCarouselShow); 
     },
     methods:{
         getCompanies(){
@@ -43,6 +50,17 @@ export default {
                 .then(response => {
                     this.values.companies = response.data.data;
                 })
+        },
+        nextTrick(){
+            this.$nextTick(() => {
+                window.addEventListener('resize', this.changeCarouselShow);
+            })
+        },
+        changeCarouselShow(){
+            this.windowWidth = window.innerWidth;
+            if(this.windowWidth < 600){
+                this.itemsToShow = 1;
+            }
         }
     }
 };

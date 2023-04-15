@@ -1,6 +1,6 @@
 <template>
     <div
-        class="d-flex flex-column p-4 mr-4 position-relative text-start"
+        class="card d-flex flex-column p-4 mr-4 position-relative text-start"
         :class="{border:border}"
         :style="'width:' + width+';height:'+height"
     >
