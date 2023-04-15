@@ -216,11 +216,45 @@
         width: 100% !important;
         margin-bottom: 30px !important;
     }
-    .employee-cv-title{
+    .employee-cv-title, .company-cv-title{
         font-size: 13px;
     }
-    .employee-cv-btn{
+    .employee-cv-btn, .company-cv-btn{
         font-size: 13px;
         padding: 8px 40px !important;
     }
+
+    /* company */
+    .company-title{
+        padding: 30px !important;
+    }
+    .company-title h1{
+        font-size: 30px;
+    }
+    .company-desc{
+        width: 100% !important;
+        padding-top: 30px !important;
+    }
+    .compnay-form{
+        margin-top: 0 !important;
+    }
+    .company-group{
+        margin-top: 20px !important;
+    }
+    .company-input-group-title{
+        margin-bottom: 15px !important;
+    }
+    .company-input-group{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0 !important;
+    }
+    .company-input-card{
+        margin-right: 0 !important;
+        margin-bottom: 10px !important;
+    }
+    .company-input{
+        width: 100% !important;
+    }
+
 }
