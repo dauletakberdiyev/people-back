@@ -18,11 +18,11 @@
                     <div class="company-input-group d-flex mt-3">
                         <div class="company-input-card d-flex flex-column me-4">
                             <div class="flex-start font-size-12">{{ $t('employer.company_name') }}</div>
-                            <input type="text" class="company-input in-text w-240 p-2 font-size-14" v-model="request.name" required>
+                            <input :placeholder="$t('employer.company_plc')" type="text" class="company-input in-text w-240 p-2 font-size-14" v-model="request.name" required>
                         </div>
                         <div class="d-flex flex-column">
                             <div class="flex-start font-size-12">{{ $t('employer.company_site') }}</div>
-                            <input type="text" class="company-input in-text w-240 p-2 font-size-14" v-model="request.web_site" required>
+                            <input :placeholder="$t('employer.company_site_plc')" type="text" class="company-input in-text w-240 p-2 font-size-14" v-model="request.web_site" required>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                     <div class="company-input-group d-flex mt-3">
                         <div class="company-input-card d-flex flex-column me-4">
                             <div class="flex-start font-size-12">{{ $t('employer.position') }}</div>
-                            <input type="text" class="company-input in-text w-240 p-2 font-size-14" v-model="request.position" required>
+                            <input :placeholder="$t('employer.position_plc')" type="text" class="company-input in-text w-240 p-2 font-size-14" v-model="request.position" required>
                         </div>
                         <div class="company-input-card d-flex flex-column me-4">
                             <div class="flex-start font-size-12">{{ $t('employer.employment') }}</div>
@@ -55,11 +55,11 @@
                     <div class="company-input-group d-flex mt-3">
                         <div class="company-input-card d-flex flex-column me-4">
                             <div class="flex-start font-size-12">{{ $t('employer.salary') }}</div>
-                            <input type="text" class="company-input in-text w-240 p-2 font-size-14" v-model="request.salary" required>
+                            <input :placeholder="$t('employer.salary_plc')" type="text" class="company-input in-text w-240 p-2 font-size-14" v-model="request.salary" required>
                         </div>
                         <div class="company-input-card d-flex flex-column">
                             <div class="flex-start font-size-12">{{ $t('employer.experience') }}</div>
-                            <input type="number" class="company-input in-text w-240 p-2 font-size-14" min="0" max="30" v-model="request.experience" required>
+                            <input :placeholder="$t('employer.experience_plc')" type="number" class="company-input in-text w-240 p-2 font-size-14" min="0" max="30" v-model="request.experience" required>
                         </div>
                     </div>
                     <div class="company-input-group d-flex flex-column mt-3">
@@ -74,15 +74,15 @@
                     <div class="company-input-group d-flex mt-3">
                         <div class="company-input-card d-flex flex-column me-4">
                             <div class="flex-start font-size-12">{{ $t('employer.name') }}</div>
-                            <input type="text" class="company-input in-text w-240 p-2 font-size-14" v-model="request.first_last_name" required>
+                            <input :placeholder="$t('employer.company_name_surname_plc')" type="text" class="company-input in-text w-240 p-2 font-size-14" v-model="request.first_last_name" required>
                         </div>
                         <div class="company-input-card d-flex flex-column me-4">
                             <div class="flex-start font-size-12">{{ $t('employer.phone') }}</div>
-                            <input type="text" class="company-input in-text w-240 p-2 font-size-14" v-model="request.phone" required>
+                            <input :placeholder="$t('employer.phone_plc')" type="text" class="company-input in-text w-240 p-2 font-size-14" v-model="request.phone" required>
                         </div>
                         <div class="company-input-card d-flex flex-column">
                             <div class="flex-start font-size-12">{{ $t('employer.email') }}</div>
-                            <input type="text" class="company-input in-text w-240 p-2 font-size-14" v-model="request.email" required>
+                            <input :placeholder="$t('employer.email_plc')" type="text" class="company-input in-text w-240 p-2 font-size-14" v-model="request.email" required>
                         </div>
                     </div>
                     <div class="mt-5 mb-5 d-flex">

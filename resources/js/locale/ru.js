@@ -118,7 +118,15 @@ export default {
     email: "Электронная почта",
     full: "Полная",
     half: "Частичная",
-    online: "Удаленно"
+    online: "Удаленно",
+    company_plc: "Google",
+    company_site_plc: "www.google.com",
+    position_plc: "Директор",
+    salary_plc: "300000",
+    experience_plc: "4",
+    company_name_surname_plc: "Имя Фамилия",
+    phone_plc: "87007007070",
+    email_plc: "someperson"
   },
   success: {
     title: "Спасибо что доверяете нам!",
