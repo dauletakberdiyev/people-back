@@ -259,4 +259,12 @@
     .company-input{
         width: 100% !important;
     }
+
+    /* success */
+    .success{
+        margin: 50px 0 !important;
+    }
+    .success-desc{
+        font-size: 20px !important;
+    }
 }

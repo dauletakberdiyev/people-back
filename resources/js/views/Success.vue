@@ -5,7 +5,7 @@
             <div class="text-start font-size-42 mb-3">
                 {{ $t('success.title') }}
             </div>
-            <div class="text-start font-size-24 lh-normal" v-html="$t('success.desc')"></div>
+            <div class="success-desc text-start font-size-24 lh-normal" v-html="$t('success.desc')"></div>
         </div>
     </div>
     <footer-view/>
