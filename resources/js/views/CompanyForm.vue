@@ -37,7 +37,7 @@
                         </div>
                         <div class="company-input-card d-flex flex-column me-4">
                             <div class="flex-start font-size-12">{{ $t('employer.employment') }}</div>
-                            <select type="text" class="company-input in-text w-240 p-2 font-size-14 bg-white" v-model="request.employment" required>
+                            <select type="text" class="company-input in-text w-240 p-2 font-size-14 bg-white select-input" v-model="request.employment" required>
                                 <option v-for="employment in values.employmentTitle" :value="employment.id">
                                     {{ employment.title }}
                                 </option>
@@ -45,7 +45,7 @@
                         </div>
                         <div class="company-input-card d-flex flex-column">
                             <div class="flex-start font-size-12">{{ $t('employer.city') }}</div>
-                            <select class="company-input in-text w-240 p-2 font-size-14 bg-white" v-model="request.city" required>
+                            <select class="company-input in-text w-240 p-2 font-size-14 bg-white select-input" v-model="request.city" required>
                                 <option v-for="city in values.cities" :value="city.id">
                                     {{ city.title }}
                                 </option>

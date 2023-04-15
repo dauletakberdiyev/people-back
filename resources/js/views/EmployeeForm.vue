@@ -29,7 +29,7 @@
                             <div class="text-start font-size-14">
                                 {{ $t('cv.gender') }}
                             </div>
-                            <select class="employee-input in-text w-240 p-2 font-size-14 bg-white" v-model="request.gender" required>
+                            <select class="employee-input in-text w-240 p-2 font-size-14 bg-white select-input" v-model="request.gender" required>
                                 <option value="1">{{$t('vacancies.man')}}</option>
                                 <option value="2">{{$t('vacancies.woman')}}</option>
                             </select>
@@ -56,7 +56,7 @@
                             <div class="text-start font-size-14">
                                 {{ $t('cv.city') }}
                             </div>
-                            <select class="employee-input in-text w-240 p-2 font-size-14 bg-white" v-model="request.city" required>
+                            <select class="employee-input in-text w-240 p-2 font-size-14 bg-white select-input" v-model="request.city" required>
                                 <option v-for="city in values.cities" :value="city.id">
                                     {{ city.title }}
                                 </option>

@@ -1,3 +1,6 @@
+.select-input{
+    height: 38.6px;
+}
 @media screen and (max-width: 600px) {
     /* Top */
     .top-banner{
@@ -256,5 +259,4 @@
     .company-input{
         width: 100% !important;
     }
-
 }
