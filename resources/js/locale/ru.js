@@ -97,7 +97,7 @@ export default {
     position_plc: "Директор",
     salary_plc: "300000",
     phone_plc: "87007007070",
-    email_plc: "someperson@gmail.com"
+    email_plc: "someperson"
   },
   employer: {
     title: "Создании объявлении о вакансии",
