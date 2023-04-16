@@ -120,7 +120,7 @@ export default {
             this.pagination = pagination;
         },
         viewCv(cv){
-            const pdfView = this.$router.resolve({name: 'client_cv', params:{docPath: cv.substring(39)}});
+            const pdfView = this.$router.resolve({name: 'client_cv', params:{docPath: cv.substring(42)}});
             window.open(pdfView.href, '_blank');
         }
     }
