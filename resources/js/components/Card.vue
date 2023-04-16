@@ -37,9 +37,11 @@
             </div>
         </div>
         <div class="d-flex justify-content-center mt-3 position-absolute bottom-5">
-            <button class="btn bg-darkwhite outline-blue border-transparent rounded-extra p-2 px-5 font-size-12">
-                {{ $t('card.view') }}
-            </button>
+            <router-link :to="{name: 'new_cv'}">
+                <button class="btn bg-darkwhite outline-blue border-transparent rounded-extra p-2 px-5 font-size-12">
+                    {{ $t('card.view') }}
+                </button>
+            </router-link>
         </div>
     </div>
 </template>
