@@ -149,6 +149,7 @@ export default {
         salary: 'Salary',
         city: 'City',
         phone: 'Phone',
-        email: 'Email'
+        email: 'Email',
+        cv: 'CV'
     }
 };

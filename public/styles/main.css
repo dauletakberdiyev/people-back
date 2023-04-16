@@ -1,6 +1,12 @@
 .select-input{
     height: 38.6px;
 }
+.cv-link{
+    text-decoration: none;
+    border: none;
+    background: none;
+    color: inherit;
+}
 @media screen and (max-width: 600px) {
     /* Top */
     .top-banner{

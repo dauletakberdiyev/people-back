@@ -22,11 +22,12 @@
                     <th>{{$t('admin.city')}}</th>
                     <th>{{$t('admin.phone')}}</th>
                     <th>{{$t('admin.email')}}</th>
+                    <th>{{$t('admin.cv')}}</th>
                     <th></th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr v-for="client in this.clients">
+                <tr v-for="(client,index) in this.clients">
                     <td class="align-middle">{{client.id}}</td>
                     <td class="align-middle">{{client.first_name}} {{client.second_name}}</td>
                     <td class="align-middle">{{client.gender}}</td>
@@ -36,10 +37,17 @@
                     <td class="align-middle">{{client.city}}</td>
                     <td class="align-middle">{{client.phone}}</td>
                     <td class="align-middle">{{client.email}}</td>
+                    <td class="align-middle">
+                        <button
+                            class="cv-link"
+                            @click="viewCv(client.cv)">
+                            <i class="fas fa-file"></i>
+                        </button>
+                    </td>
                     <th class="align-middle">
                         <button class="btn btn-danger"
-                                @click="deleteClient(client.id)">
-                                {{$t('admin.delete')}}
+                            @click="deleteClient(client.id)">
+                            {{$t('admin.delete')}}
                         </button>
                     </th>
                 </tr>
@@ -66,19 +74,21 @@
 
 <script>
 import Admin from "@/components/Admin.vue";
+
 export default {
     name: "AdminClient",
     components: {
-        "admin-side-bar": Admin
+        "admin-side-bar": Admin,
     },
     data(){
         return{
-            clients:{},
-            pagination:{}
+            clients:[],
+            pagination:{},
+            
         }
     },
     mounted() {
-        this.getCompanies()
+        this.getCompanies();
     },
     methods:{
         getCompanies(page_url){
@@ -86,7 +96,8 @@ export default {
             this.$http.get(page_url)
                 .then(response => {
                     this.clients = response.data.data;
-                    this.makePagination(response.data)
+                    this.makePagination(response.data);
+                    console.log(this.clients[4].cv.substring(39))
                 })
         },
         deleteClient(id){
@@ -107,8 +118,11 @@ export default {
                 links: response.links,
             }
             this.pagination = pagination;
-            console.log(this.pagination)
         },
+        viewCv(cv){
+            const pdfView = this.$router.resolve({name: 'client_cv', params:{docPath: cv.substring(39)}});
+            window.open(pdfView.href, '_blank');
+        }
     }
 }
 </script>
