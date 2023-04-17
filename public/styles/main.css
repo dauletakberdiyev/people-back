@@ -25,7 +25,19 @@
         font-size: 0.8em !important;
     }
     .top-banner-btn{
-        display: none !important;
+        flex-direction: column;
+    }
+    .btn_work{
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    .btn_work a{
+        font-size: 13px;
+        width: 210px;
+        margin-right: 0 !important;
+    }
+    .icon-first{
+        left: 55px !important;
     }
     .top-banner-img{
         margin: 0 !important;

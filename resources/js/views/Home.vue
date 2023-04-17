@@ -13,7 +13,7 @@
                 </div>
                 <div class="top-banner-btn d-flex mt-4">
                     <div class="btn_work">
-                        <img src="assets/images/icon-1@2x.png" alt="icon" class="icon">
+                        <img src="assets/images/icon-1@2x.png" alt="icon" class="icon icon-first">
                         <router-link class="btn bg-grey-light text-primary btn-pd me-5" :to="'/new_cv'">
                             {{$t('home.search_job')}}
                         </router-link>
