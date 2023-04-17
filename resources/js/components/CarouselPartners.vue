@@ -22,11 +22,10 @@ export default {
     data(){
         return{
             partners:[
-                'assets/images/dalatex@2x.png',
-                'assets/images/azia-import@2x.png',
-                'assets/images/baytakdala@2x.png',
-                'assets/images/happy-cake@2x.png',
-                'assets/images/lg-hausys@2x.png'
+                'assets/images/almatherm.jpeg',
+                'assets/images/jakko.jpeg',
+                'assets/images/sema.jpeg',
+                'assets/images/seyco.jpeg'
             ],
             windowWidth: 0,
             itemsToShow: 4
