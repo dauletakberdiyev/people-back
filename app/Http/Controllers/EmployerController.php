@@ -110,9 +110,20 @@ class EmployerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Employer $employer)
+    public function update(Request $request, $id)
     {
-        //
+        try {
+            $employer = Employer::whereId($id)->update($request->all());
+        }
+        catch (Exception $e){
+            return response()->json([
+                'message' => $e->getMessage(),
+            ]);
+        }
+        return response()->json([
+            'message' => 'employer update successfully',
+            'data' => $employer
+        ]);
     }
 
     /**
