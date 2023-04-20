@@ -150,6 +150,7 @@ export default {
         city: 'City',
         phone: 'Phone',
         email: 'Email',
-        cv: 'CV'
+        cv: 'CV',
+        edit: 'Edit'
     }
 };

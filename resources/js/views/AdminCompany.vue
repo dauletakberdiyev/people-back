@@ -21,6 +21,7 @@
                     <th>Salary</th>
                     <th>About Position</th>
                     <th></th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -32,6 +33,13 @@
                     <td class="align-middle">{{company.city}}</td>
                     <td class="align-middle">{{company.salary}}</td>
                     <td class="align-middle">{{company.position_desc}}</td>
+                    <th class="align-middle">
+                        <router-link :to="{name: 'admin_company_edit', params:{id: company.id}}">
+                            <button class="btn btn-info">
+                                {{$t('admin.edit')}}
+                            </button>
+                        </router-link>
+                    </th>
                     <th class="align-middle">
                         <button class="btn btn-danger"
                                 @click="deleteCompany(company.id)">
@@ -105,7 +113,6 @@ export default {
                 links: response.links,
             }
             this.pagination = pagination;
-            console.log(this.pagination)
         },
     }
 }

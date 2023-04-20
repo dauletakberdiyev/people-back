@@ -8,6 +8,7 @@ import Success from "@/views/Success.vue";
 import AdminCompany from "@/views/AdminCompany.vue";
 import AdminClient from "@/views/AdminClient.vue";
 import PdfViewer from "@/views/PdfViewer.vue";
+import AdminCompanyEdit from "@/views/AdminCompanyEdit.vue";
 
 const router = createRouter({
     history: createWebHashHistory (),
@@ -60,6 +61,12 @@ const router = createRouter({
             path: '/cilent_cv/:docPath',
             name: 'client_cv',
             component: PdfViewer,
+            props: true
+        },
+        {
+            path: '/admin_company/:id',
+            name: 'admin_company_edit',
+            component: AdminCompanyEdit,
             props: true
         }
     ]

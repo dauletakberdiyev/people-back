@@ -97,7 +97,6 @@ export default {
                 .then(response => {
                     this.clients = response.data.data;
                     this.makePagination(response.data);
-                    console.log(this.clients[4].cv.substring(39))
                 })
         },
         deleteClient(id){
