@@ -151,6 +151,7 @@ export default {
         phone: 'Phone',
         email: 'Email',
         cv: 'CV',
-        edit: 'Edit'
+        edit: 'Edit',
+        done: 'Done'
     }
 };

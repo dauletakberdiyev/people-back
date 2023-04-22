@@ -55,9 +55,9 @@
                         <textarea rows="4" class="font-size-14 p-2 textarea" type="text" v-model="comp.position_desc"></textarea>
                     </td>
                     <th class="align-middle">
-                        <button class="btn btn-danger"
+                        <button class="btn btn-info"
                                 @click="this.updateCompany(comp)">
-                                {{$t('admin.delete')}}
+                                {{$t('admin.done')}}
                         </button>
                     </th>
                 </tr>
